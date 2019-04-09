@@ -1,6 +1,8 @@
 .texpadtmp
 auto
-/fonts/
+
+/fonts/*.otf
+/fonts/*.ttf
 
 *.log
 *.aux
@@ -12,3 +14,10 @@ auto
 *.ilg
 *.pdf
 *.DS_Store
+*.xdy
+*.gls
+*.glo
+*.glg
+*.fdb_latexmk
+*.fls
+*.synctex.gz

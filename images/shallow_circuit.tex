@@ -2,13 +2,13 @@
 %!TEX encoding = UTF-8 Unicode
 
 \documentclass[11pt,tikz,border=1]{standalone}
-\usepackage[default,mdseries=Light,bfseries=Medium,path=../fonts]{cjkfonts}
+\usepackage[default]{cjkfonts}
 \usetikzlibrary{calc,positioning}
 
 \input{../westernfonts}
 
 \begin{document}
-  \begin{tikzpicture}[font={\RobotoLight}]
+  \begin{tikzpicture}
 
     \foreach \x in {0,...,26}
       \draw (\x * 0.4,0) -- (\x * 0.4, 1);

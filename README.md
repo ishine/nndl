@@ -1,5 +1,4 @@
-Another Chinese Translation of Neural Networks and Deep Learning
-================================================================
+# Another Chinese Translation of Neural Networks and Deep Learning
 
 This is another (work in progress) Chinese translation of Michael Nielsen's
 [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/),
@@ -18,43 +17,38 @@ It's recommended to install
 - [Tex Live](http://tug.org/texlive/) 2015 or later for Linux
 - [MacTex](http://tug.org/mactex/) 2015 or later for Mac OS X
 
-Also, please make sure you have these font packages installed: `roboto`,
-`sourcecodepro`, `sourceserifpro`, as these fonts are required in typesetting. You can install them
-with `tlmgr` command.
-
-**Note:** If your TeX system is not installed in the default `/usr/local`, you need to change the `fontdir` macro in `westernfonts.tex`, default is:
-
-```shell
-\newcommand{\fontdir}[0]{/usr/local/texlive/2015/texmf-dist/fonts/}
-```
-
 ### Check out source code
 
 Use git to clone this repository and the code samples as a sub module:
 
 ```shell
 $ git clone --recursive https://github.com/zhanggyb/nndl.git
-````
+```
 
 or
+
 ```shell
 $ git clone https://github.com/zhanggyb/nndl.git
 $ cd nndl
 $ git submodule update --init --recursive
-````
+```
 
 ### Prepare Fonts
 
-Run the `bootstrap.sh` in the working copy to download CJK fonts required:
+Download and install these free fonts:
 
-``` shell
-$ ./bootstrap.sh
+- [Google Noto CJK](https://www.google.com/get/noto/help/cjk/)
+- [Adobe Source Serif Pro](https://github.com/adobe-fonts/source-serif-pro)
+- [Adobe Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
+
+In most Linux distributions, these fonts can be installed with the default package manager.
+
+Mac user could install with [Homebrew](https://brew.sh/):
+
+```shell
+$ brew tap caskroom/fonts
+$ brew cask install font-noto-sans-cjk font-noto-serif-cjk font-source-code-pro font-source-serif-pro
 ```
-
-This is a simple shell script to download Google Noto CJK SC into `fonts/`. You
-can also manually download the
-[font file](https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKsc-hinted.zip)
-and unarchive to `fonts/`.
 
 ### Generate PDF
 
@@ -65,5 +59,6 @@ $ make
 ```
 
 to typeset and generate the PDF document. Or use your favorite GUI TeX
-application, but choose XeLaTeX as the typeset engine to support the chinese
+application, but choose `XeLaTeX` as the typeset engine to support the chinese
 fonts.
+
